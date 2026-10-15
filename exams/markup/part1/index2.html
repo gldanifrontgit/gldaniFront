@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Interface</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+      }
+
+      .container {
+        width: 800px;
+        background-color: #ffffff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      /* Hero Banner Section */
+      .hero-banner {
+        background-color: #000000;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        position: relative;
+      }
+
+      .hero-content h3 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-content h1 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .hero-content a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 4px;
+      }
+
+      .hero-image img {
+        height: 150px;
+        display: block;
+      }
+
+      .slider-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #555555;
+        border-radius: 50%;
+      }
+
+      .dot.active {
+        background-color: #db4444;
+        border: 2px solid #ffffff;
+        outline: 1px solid #db4444;
+        width: 8px;
+        height: 8px;
+      }
+
+      /* Typography & Headings */
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #000000;
+      }
+
+      /* Table Section */
+      .table-container {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border: 1px solid #e0e0e0;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      /* Video Section */
+      .video-container {
+        width: 100%;
+      }
+
+      video {
+        width: 100%;
+        display: block;
+        background-color: #000000;
+      }
+
+      /* Form Section */
+      .form-container {
+        width: 100%;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 5px;
+        color: #333333;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        background-color: #db4444;
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 3px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-banner">
+        <div class="hero-content">
+          <h3>iPhone 14 Series</h3>
+          <h1>Up to 10%<br />off Voucher</h1>
+          <a href="#">Shop Now &rarr;</a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1663499482523-1c0c1ebe4cc1?q=80&w=400&auto=format&fit=crop"
+            alt="iPhone 14"
+          />
+        </div>
+        <div class="slider-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Product Information</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Stock Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ASUS FHD Gaming Laptop</td>
+              <td>$960</td>
+              <td>In Stock</td>
+            </tr>
+            <tr>
+              <td>IPS LCD Gaming Monitor</td>
+              <td>$1160</td>
+              <td>Out of Stock</td>
+            </tr>
+            <tr>
+              <td>HAVIT HV-G92 Gamepad</td>
+              <td>$560</td>
+              <td>In Stock</td>
+            </tr>
+            <tr>
+              <td>AK-900 Wired Keyboard</td>
+              <td>$200</td>
+              <td>In Stock</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="video-container">
+        <h2>Featured Video</h2>
+        <video controls>
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <form onsubmit="event.preventDefault()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

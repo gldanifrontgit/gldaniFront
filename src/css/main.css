@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --dark-red: hsl(1 60% 45%);
+  --light-red: hsl(1 95% 30%);
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 30px;
+}
+
+/* floating label  */
+.floating-label {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(90deg, var(--dark-red) 0%, var(--light-red) 100%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(216, 141, 141, 0.3);
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-label:hover {
+  box-shadow: 0 8px 25px rgba(196, 85, 85, 0.4);
+  transform: translateY(-2px);
+}
+
+.floating-label a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.floating-label a:hover {
+  text-decoration: underline;
+}
+/* content  */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.container > div {
+  margin: 50px 0;
+}
+.module-section {
+  border: solid 1px #7f7a7a;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.table-container {
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  overflow-x: auto;
+}
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: #ffffff;
+  min-width: 100%;
+}
+.schedule-table thead {
+  background: linear-gradient(90deg, var(--dark-red) 0%, var(--light-red) 100%);
+}
+.schedule-table th,
+.schedule-table td {
+  padding: 5px;
+  text-align: center;
+  color: #334155;
+  font-size: 12px;
+}
+.schedule-table th {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.schedule-table tbody tr {
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+.schedule-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+.schedule-table tbody tr:hover td:not([rowspan]) {
+  background: #eff6ff;
+  transform: translateX(2px);
+}
+.schedule-table td {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+.schedule-table td[rowspan] {
+  font-weight: 700;
+  color: #0f172a;
+  background: #eef2ff;
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: inset 8px 0 0px rgba(122, 107, 107, 0.12);
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+.schedule-table td.active {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.schedule-table .day-cell {
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.schedule-table .day-cell:hover {
+  background-color: #e0e7ff !important;
+}
+
+.schedule-table tr.table-row-hidden {
+  display: none;
+}
+.schedule-table caption {
+  caption-side: bottom;
+  padding-top: 12px;
+  color: #475569;
+  font-size: 13px;
+}
+@media (max-width: 780px) {
+  .table-container {
+    padding: 18px;
+  }
+  .schedule-table th,
+  .schedule-table td {
+    padding: 5px;
+    font-size: 13px;
+  }
+}
+.main-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+.sub-title {
+  text-align: center;
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+details {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+details.closed {
+  /* Default closed state */
+}
+
+details.open {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+details.opening .content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+details.closing .content {
+  animation: fadeOut 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+summary {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #2c3e50;
+  outline: none;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+summary:hover {
+  background-color: #f9f9f9;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #edf2f7;
+  background-color: #f8fafc;
+  color: #2980b9;
+}
+
+.content {
+  padding: 0 25px;
+  background: #fff;
+  line-height: 1.6;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+details[open] .content {
+  opacity: 1;
+  max-height: 2000px;
+  padding: 25px;
+  transform: translateY(0);
+}
+
+h3 {
+  color: #2980b9;
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+  border-left: 4px solid #2980b9;
+  padding-left: 10px;
+}
+h3:first-child {
+  margin-top: 0;
+}
+p,
+li {
+  font-size: 15px;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+ul,
+ol {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+pre {
+  background: #2d3748;
+  color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 15px 0;
+  font-size: 14px;
+}
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.badge {
+  background: #319795;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.badge-colored {
+  background: #319795;
+}
+
+.badge-colored.soon {
+  background: #e67e22;
+}
+
+.badge-time {
+  background: #718096;
+}
+a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .container > div {
+    margin: 20px 0;
+    padding: 10px;
+  }
+  .main-title {
+    font-size: 22px;
+  }
+  .sub-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  summary {
+    padding: 12px;
+    font-size: 15px;
+  }
+  details[open] .content {
+    padding: 15px;
+  }
+  h3 {
+    font-size: 16px;
+    margin: 15px 0 10px 0;
+  }
+  ul,
+  ol {
+    margin-left: 15px;
+  }
+  pre {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .table-container {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .schedule-table th,
+  .schedule-table td {
+    padding: 4px;
+    font-size: 11px;
+  }
+}

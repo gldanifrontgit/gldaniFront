@@ -1,0 +1,81 @@
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .header_inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer_inner {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .top_inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .top_inner .sale {
+    width: auto;
+    text-align: center;
+  }
+  .whishlist_items {
+    flex-wrap: wrap;
+  }
+  .whishlist_items .item {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header_inner {
+    flex-direction: column;
+  }
+  .header_inner .search_socs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .header_inner nav a {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .bag {
+    padding: 10px;
+  }
+  .footer_inner {
+    flex-direction: column;
+  }
+  .footer_inner form {
+    display: inline-block;
+  }
+  .whishlist_items .item {
+    width: 100%;
+  }
+  .copyright {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner img {
+    height: 200px; /* Adjust height for smaller screens */
+    object-fit: cover; /* Ensure image covers the area */
+  }
+}
