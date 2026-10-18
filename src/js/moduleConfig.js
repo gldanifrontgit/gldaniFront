@@ -350,4 +350,66 @@ export const moduleConfigs = {
       },
     ],
   },
+  git: {
+    name: "ვერსიების კონტროლი Git ტექნოლოგიის გამოყენებით",
+    exams: [
+      {
+        time: new Date(2026, 9, 19).getTime(),
+        text: "ს.შ 1,2 კოდის ვერსიის კონტროლის საფუძვლები და პროექტის ვერსიის კონტროლი",
+        date: "19.10.2026",
+        duration: "4 სთ",
+        content: `
+          <h3>📝 ს.შ 1 - კოდის ვერსიის კონტროლის საფუძვლები (11:30 – 13:30):</h3>
+          <ol>
+            <li>დააკონფიგურირეთ Git: <code>git config --global user.name</code> და <code>git config --global user.email</code> (GitHub ანგარიშის ელ.ფოსტით).</li>
+            <li>შექმენით ფოლდერი <code>git-exam-სახელი-გვარი</code> და მასში ლოკალური რეპოზიტორი ბრძანებით <code>git init</code>.</li>
+            <li>დაამატეთ ფაილები: <code>index.html</code> (მარტივი პორტფოლიოს გვერდი), <code>style.css</code>, <code>README.md</code> (პროექტის აღწერა) და <code>.gitignore</code>.</li>
+            <li>ცვლილებები დაამატეთ და დააკომიტეთ (<code>git status</code>, <code>git add</code>, <code>git commit -m</code>). გააკეთეთ მინიმუმ 3 კომიტი გასაგები შეტყობინებებით (მაგ: "დაემატა ნავიგაცია").</li>
+            <li>GitHub-ზე შექმენით ახალი საჯარო რეპოზიტორი და დააკავშირეთ ლოკალურს: <code>git branch -M main</code>, <code>git remote add origin ...</code>, <code>git push -u origin main</code>.</li>
+            <li>შეიტანეთ ახალი ცვლილება, დააკომიტეთ და ისევ ასახეთ GitHub-ზე (<code>git push</code>). ისტორია შეამოწმეთ ბრძანებით <code>git log --oneline</code> და გადაიღეთ მისი სქრინშოტი.</li>
+          </ol>
+          <h3>📝 ს.შ 2 - პროექტის ვერსიის კონტროლი (13:30 – 15:30):</h3>
+          <ol>
+            <li>სხვა ფოლდერში დააკოპირეთ თქვენი GitHub რეპოზიტორი: <code>git clone</code>.</li>
+            <li>დაკოპირებულ პროექტში შექმენით ახალი განშტოება <code>feature/about</code> და გადადით მასზე (<code>git branch</code>, <code>git checkout</code>).</li>
+            <li>განშტოებაში დაამატეთ ახალი სექცია "ჩემ შესახებ", დააკომიტეთ და განშტოება ასახეთ GitHub-ზე: <code>git push -u origin feature/about</code>.</li>
+            <li>იგივე გაიმეორეთ მეორე განშტოებით <code>feature/contact</code> (სექცია "კონტაქტი").</li>
+            <li>დაბრუნდით <code>main</code> განშტოებაზე და შეაერთეთ ორივე განშტოება: <code>git checkout main</code>, <code>git merge feature/about</code>, <code>git merge feature/contact</code>, შემდეგ <code>git push</code>.</li>
+            <li>დაბრუნდით პირველ (საწყის) ფოლდერში და ჩამოიტანეთ GitHub-ზე ასახული ცვლილებები ლოკალურ რეპოზიტორში: <code>git pull</code>. შეამოწმეთ, რომ ახალი სექციები ლოკალურადაც ჩანს.</li>
+            <li>გადაიღეთ სქრინშოტი ბრძანების <code>git log --oneline --graph --all</code> შედეგის და GitHub-ზე განშტოებების (Branches) გვერდის.</li>
+          </ol>
+          <p>⏱ დაწყება: 11:30. შესრულების დრო: 4 საათი.</p>
+          <h3>📁 ჩასაბარებელი:</h3>
+          <p>ფოლდერი თქვენი სახელითა და გვარით: <code>links.txt</code> (თქვენი GitHub რეპოზიტორის ბმული) და სქრინშოტები.</p>
+          <p>
+            <a href="https://drive.google.com/drive/folders/160QrNyYl4ZmGcPuQ1wyN5vS3rWkirOVs?usp=drive_link" target="_blank">🔗 ჩასაბარებელი ლინკი (Google Drive)</a>
+          </p>
+        `,
+      },
+      {
+        time: new Date(2026, 9, 20).getTime(),
+        text: "ს.შ 3 კოდის ვერსიის კონფლიქტები",
+        date: "20.10.2026",
+        duration: "2 სთ",
+        content: `
+          <h3>📝 ს.შ 3 - კოდის ვერსიის კონფლიქტები (11:30 – 13:30):</h3>
+          <p>იმუშავეთ იმავე რეპოზიტორში, რომელიც 19.10-ზე შექმენით.</p>
+          <ol>
+            <li>შექმენით ორი განშტოება: <code>change-title-1</code> და <code>change-title-2</code>.</li>
+            <li>ორივე განშტოებაში სხვადასხვანაირად შეცვალეთ <code>index.html</code>-ის ერთი და იგივე სტრიქონი (მაგ: <code>&lt;h1&gt;</code> სათაური) და დააკომიტეთ.</li>
+            <li>ორივე განშტოება შეაერთეთ <code>main</code>-ში (<code>git merge</code>). მეორე განშტოების შეერთებისას კონფლიქტი წარმოიქმნება.</li>
+            <li>დაადგინეთ, რამ გამოიწვია კონფლიქტი: <code>git status</code>, <code>git diff</code>. ფაილში მოძებნეთ მარკერები <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</li>
+            <li>მოაგვარეთ კონფლიქტი (ხელით ან VS Code-ის Merge Editor-ით), წაშალეთ მარკერები და შეასრულეთ <code>git add</code>, <code>git commit</code>, <code>git push</code>.</li>
+            <li><code>README.md</code>-ში მოკლედ აღწერეთ, რამ გამოიწვია კონფლიქტი და როგორ მოაგვარეთ. დააკომიტეთ და ასახეთ GitHub-ზე.</li>
+          </ol>
+          <p>⏱ შესრულების დრო: 2 საათი.</p>
+          <h3>📁 ჩასაბარებელი:</h3>
+          <p>ფოლდერი თქვენი სახელითა და გვარით: <code>links.txt</code> (რეპოზიტორის ბმული) და სქრინშოტები (კონფლიქტი ტერმინალში ან რედაქტორში, <code>git log --oneline --graph --all</code>).</p>
+          <p>
+            <a href="https://drive.google.com/drive/folders/1v1tWsxd0-CcLeP61VHV5SSLKvqGHxIa9?usp=sharing" target="_blank">🔗 ჩასაბარებელი ლინკი (Google Drive)</a>
+          </p>
+        `,
+      },
+    ],
+  },
 };
