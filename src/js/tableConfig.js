@@ -29,18 +29,24 @@ export function tableConfig() {
       teacher: "ლევან ჭუმბურიძე",
       room: 16,
     },
+    react: {
+      module: "React",
+      teacher: "ლევან ჭუმბურიძე",
+      room: 12,
+    },
   };
   // Schedule:
   // periods can be a single number or an array of numbers
   const schedule = [
-    { day: "ორშაბათი", periods: [1, 2, 3, 4, 5], moduleId: "git" },
-    { day: "ორშაბათი", periods: [6, 7, 8], moduleId: "AI" },
-    { day: "სამშაბათი", periods: [1, 2, 3], moduleId: "AI" }, // multiple periods
-    { day: "ოთხშაბათი", periods: [9], moduleId: "typescript" },
-    { day: "ოთხშაბათი", periods: [10], moduleId: "AI" },
-    { day: "ხუთშაბათი", periods: [1, 2, 3, 4, 5, 6], moduleId: "typescript" },
-    { day: "პარასკევი", periods: [9, 10, 11], moduleId: "typescript" },
-    { day: "პარასკევი", periods: [12], moduleId: "AI" },
+    { day: "ორშაბათი", periods: [3, 4, 5, 6], moduleId: "git" },
+    // { day: "ორშაბათი", periods: [6, 7, 8], moduleId: "AI" },
+    { day: "სამშაბათი", periods: [1, 2], moduleId: "git" }, // multiple periods
+    { day: "სამშაბათი", periods: [3, 4, 5], moduleId: "react" }, // multiple periods
+    // { day: "ოთხშაბათი", periods: [9], moduleId: "typescript" },
+    // { day: "ოთხშაბათი", periods: [10], moduleId: "AI" },
+    { day: "ხუთშაბათი", periods: [1, 2, 3, 4], moduleId: "react" },
+    // { day: "პარასკევი", periods: [9, 10, 11], moduleId: "typescript" },
+    { day: "შაბათი", periods: [1, 2, 3, 4], moduleId: "react" },
     // Add more schedule entries as needed:
     // { day: "ოთხშაბათი", periods: 3, moduleId: "webdev" }, // single period
   ];
