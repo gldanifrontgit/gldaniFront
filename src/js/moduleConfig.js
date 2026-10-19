@@ -387,7 +387,7 @@ export const moduleConfigs = {
         `,
       },
       {
-        time: new Date(2026, 9, 20).getTime(),
+        time: new Date(2026, 9, 19).getTime(),
         text: "ს.შ 3 კოდის ვერსიის კონფლიქტები",
         date: "20.10.2026",
         duration: "2 სთ",
