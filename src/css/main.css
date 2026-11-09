@@ -63,88 +63,16 @@ body {
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
   border: 1px solid rgba(148, 163, 184, 0.18);
-  overflow-x: auto;
-}
-.schedule-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  background: #ffffff;
-  min-width: 100%;
-}
-.schedule-table thead {
-  background: linear-gradient(90deg, var(--dark-red) 0%, var(--light-red) 100%);
-}
-.schedule-table th,
-.schedule-table td {
-  padding: 5px;
   text-align: center;
-  color: #334155;
-  font-size: 12px;
 }
-.schedule-table th {
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-.schedule-table tbody tr {
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease;
-}
-.schedule-table tbody tr:nth-child(even) {
-  background: #f8fafc;
-}
-.schedule-table tbody tr:hover td:not([rowspan]) {
-  background: #eff6ff;
-  transform: translateX(2px);
-}
-.schedule-table td {
-  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
-}
-.schedule-table td[rowspan] {
-  font-weight: 700;
-  color: #0f172a;
-  background: #eef2ff;
-  border-right: 1px solid rgba(148, 163, 184, 0.2);
-  box-shadow: inset 8px 0 0px rgba(122, 107, 107, 0.12);
-  letter-spacing: 0.02em;
-  vertical-align: middle;
-}
-.schedule-table td.active {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-.schedule-table .day-cell {
-  user-select: none;
-  transition: background-color 0.2s ease;
-}
-
-.schedule-table .day-cell:hover {
-  background-color: #e0e7ff !important;
-}
-
-.schedule-table tr.table-row-hidden {
-  display: none;
-}
-.schedule-table caption {
-  caption-side: bottom;
-  padding-top: 12px;
-  color: #475569;
-  font-size: 13px;
+.schedule-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 @media (max-width: 780px) {
   .table-container {
     padding: 18px;
-  }
-  .schedule-table th,
-  .schedule-table td {
-    padding: 5px;
-    font-size: 13px;
   }
 }
 .main-title {
@@ -357,10 +285,5 @@ a:hover {
   .table-container {
     padding: 12px;
     border-radius: 12px;
-  }
-  .schedule-table th,
-  .schedule-table td {
-    padding: 4px;
-    font-size: 11px;
   }
 }

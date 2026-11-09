@@ -1,15 +1,12 @@
-import { tableConfig } from "./tableConfig.js";
+import { initializeScheduleImage } from "./scheduleImage.js";
 import { initializeExams } from "./examConfig.js";
 
 function init() {
-  console.log("Dashboard initializing: starting tableConfig and initializeExams...");
+  console.log("Dashboard initializing: starting scheduleImage and initializeExams...");
   
-  try {
-    tableConfig();
-    console.log("Table config initialized successfully.");
-  } catch (error) {
-    console.error("Error initializing tableConfig:", error);
-  }
+  initializeScheduleImage().catch((error) => {
+    console.error("Error initializing schedule image:", error);
+  });
 
   try {
     initializeExams("#exams-container");
