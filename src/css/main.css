@@ -17,7 +17,7 @@ body {
 /* floating label  */
 .floating-label {
   position: fixed;
-  bottom: 30px;
+  bottom: 60px;
   right: 30px;
   background: linear-gradient(90deg, var(--dark-red) 0%, var(--light-red) 100%);
   padding: 16px 24px;
