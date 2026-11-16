@@ -239,6 +239,11 @@ code {
 .badge-time {
   background: #718096;
 }
+
+.badge-extra {
+  background: #ffc107;
+  color: #212529;
+}
 a {
   color: #2980b9;
   text-decoration: none;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoTour — ტურის დაჯავშნა</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (ბმულები) ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo">Geo<span>Tour</span></a>
+      <nav class="nav">
+        <a href="#" class="nav__link">მთავარი</a>
+        <a href="#" class="nav__link">ტურები</a>
+        <a href="#booking" class="nav__link nav__link--active">დაჯავშნა</a>
+        <a href="#" class="nav__link">კონტაქტი</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== FORM (ფონი, ფორმები, ღილაკები, რესპონსიული ბლოკი) ===== -->
+  <main class="booking" id="booking">
+    <form class="form" action="#" onsubmit="return false;">
+      <h1 class="form__title">ტურის დაჯავშნა</h1>
+      <p class="form__subtitle">Booking form</p>
+
+      <div class="form__row">
+        <div class="form__group">
+          <label for="name" class="form__label">სახელი, გვარი</label>
+          <input type="text" id="name" class="form__input" placeholder="მაგ: გიორგი ბერიძე" required>
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">ელ. ფოსტა</label>
+          <input type="email" id="email" class="form__input" placeholder="example@mail.com" required>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <div class="form__group">
+          <label for="phone" class="form__label">ტელეფონი</label>
+          <input type="tel" id="phone" class="form__input" placeholder="5XX XX XX XX">
+        </div>
+        <div class="form__group">
+          <label for="tour" class="form__label">აირჩიე ტური</label>
+          <select id="tour" class="form__input">
+            <option>სვანეთი</option>
+            <option>ბათუმი</option>
+            <option>კახეთი</option>
+            <option>ყაზბეგი</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <span class="form__label">მოგზაურის ტიპი</span>
+        <div class="form__options">
+          <label class="option"><input type="radio" name="type" checked> ინდივიდუალური</label>
+          <label class="option"><input type="radio" name="type"> ჯგუფი</label>
+        </div>
+      </div>
+
+      <div class="form__group">
+        <label for="message" class="form__label">კომენტარი</label>
+        <textarea id="message" class="form__input form__textarea" placeholder="დამატებითი სურვილები..."></textarea>
+      </div>
+
+      <label class="option option--check">
+        <input type="checkbox"> ვეთანხმები <a href="#" class="form__link">წესებსა და პირობებს</a>
+      </label>
+
+      <div class="form__buttons">
+        <button type="submit" class="btn btn--primary">გაგზავნა</button>
+        <button type="reset" class="btn btn--secondary">გასუფთავება</button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>

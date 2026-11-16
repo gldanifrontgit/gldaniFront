@@ -44,8 +44,15 @@ function initializeExams(containerSelector) {
         timeBadge = `<span class="badge badge-time">${exam.duration}</span>`;
       }
 
+      // exam.extra === true -> yellow "დამატებითი" badge
+      const extraBadge =
+        exam.extra === true
+          ? `<span class="badge badge-extra">დამატებითი</span>`
+          : "";
+
       summary.innerHTML = `
         ${badge.outerHTML}
+        ${extraBadge}
         ${exam.text}
         ${timeBadge}
         ${exam.date ? `- ${exam.date}` : ""}

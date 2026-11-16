@@ -98,9 +98,10 @@ export const moduleConfigs = {
       },
       {
         time: new Date(2026, 5, 22).getTime(),
-        text: "ს.შ 5,6 ვებგვერდის ინტერფეისის მორგება სხვადასხვა მოწყობილობებზე - დამატებითი შეფასება",
+        text: "ს.შ 5,6 ვებგვერდის ინტერფეისის მორგება სხვადასხვა მოწყობილობებზე (დამატებითი შეფასება)",
         date: "22.06.2026",
         duration: "4 სთ",
+        extra: true,
         content: `
           <h3>📝 დავალების არსი (ეტაპი 3 - რესპონსიულობა):</h3>
           <ol>
@@ -185,6 +186,33 @@ export const moduleConfigs = {
           <p>ნამუშევარი ფოლდერი თქვენი სახელითა და გვარით.</p>
           <p>
             <a href="https://drive.google.com/drive/folders/160QrNyYl4ZmGcPuQ1wyN5vS3rWkirOVs?usp=drive_link" target="_blank">🔗 ჩასაბარებელი ლინკი (Google Drive)</a>
+          </p>
+        `,
+      },
+      {
+        time: new Date(2026, 10, 17).getTime(),
+        text: "ს.შ 3 ვებგვერდის ობიექტების გაფორმება (დამატებითი შეფასება)",
+        date: "17.11.2026",
+        duration: "3 სთ",
+        extra: true,
+        content: `
+          <h3>📝 დავალების არსი (Tailwind CSS — ს.შ 3, დამატებითი):</h3>
+          <ol>
+            <li>დააყენეთ Tailwind CSS (CDN ან npm ვერსია).</li>
+            <li>გახსენით მაკეტი და ააგეთ იგივე გვერდი (ჰედერი + დაჯავშნის ფორმა) მხოლოდ Tailwind Utility Classes-ით:
+              <a href="./exams/tailwind/tailwind_result3_extra/index.html" target="_blank">🔗 მაკეტის ლინკი</a>
+            </li>
+            <li><b>ფორმები და ღილაკები:</b> ააგეთ ყველა ველი (input, select, radio, textarea, checkbox) და ღილაკები „გაგზავნა“, „გასუფთავება“.</li>
+            <li><b>რესპონსიული ბლოკი ფსევდო სელექტორებით:</b> ფორმა დიდ ეკრანზე 2 სვეტად, მობილურზე 1 სვეტად (<code>grid-cols-1 md:grid-cols-2</code>); გამოიყენეთ <code>hover:</code>, <code>focus:</code>, <code>focus-within:</code>, <code>checked:</code>.</li>
+            <li><b>ფონის თვისებები:</b> გვერდისა და ფორმის ფონი გაფორმდეს <code>bg-</code> კლასებით (ფერი, გრადიენტი).</li>
+            <li><b>შრიფტის თვისებები:</b> ლეიბლებსა და placeholder-ებზე გამოიყენეთ <code>font-</code>, <code>text-</code> (ზომა), <code>italic</code>, <code>placeholder:</code>.</li>
+            <li><b>ტექსტის თვისებები:</b> სათაურზე და ქვესათაურზე — <code>text-center</code>, <code>uppercase</code>, <code>tracking-</code>, <code>text-</code> (ფერი).</li>
+            <li><b>ბმულები:</b> ჰედერის ნავიგაცია და „წესებსა და პირობებს“ ბმული გააფორმეთ <code>hover:</code>, <code>underline</code>, <code>underline-offset-</code>, <code>decoration-</code> კლასებით.</li>
+          </ol>
+          <h3>📁 ჩასაბარებელი:</h3>
+          <p>ნამუშევარი ფოლდერი თქვენი სახელითა და გვარით.</p>
+          <p>
+            <a href="https://drive.google.com/drive/folders/1Zr_OJFB7cjdbGYiXAd0bTt4TuO3b__pD?usp=sharing" target="_blank">🔗 ჩასაბარებელი ლინკი (Google Drive)</a>
           </p>
         `,
       },
